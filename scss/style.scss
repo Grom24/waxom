@@ -139,7 +139,7 @@ body {
     font-family: Montserrat;
     font-weight: 300;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1;
 }
 a {
     cursor: pointer;
@@ -172,6 +172,40 @@ table {
     right: 0;
     left: 0;
 }
+@media screen and (max-width: 767px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        &::after,
+        &::before {
+            content: "";
+            background-color: #f1eee9;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            width: 100%;
+        }
+        & span {
+            background-color: #f1eee9;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            top: 10px;
+            width: 100%;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &::before {
+            top: 0;
+        }
+    }
+}
+img {
+    width: 100%;
+}
 .darkheader {
     background: radial-gradient(94.87% 15543.47% at 4.58% 100%, #211b19 0%, #4e3326 100%);
 }
@@ -199,6 +233,9 @@ table {
 
     &__items {
         margin-right: 25px;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 }
 .header-icon {
@@ -330,6 +367,10 @@ table {
         display: flex;
         justify-content: space-between;
         margin: 0 -30px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin: 0 30px;
+        }
     }
 
     // .realization__item
@@ -340,6 +381,9 @@ table {
         flex-direction: column;
         align-items: center;
         margin: 0 30px;
+        @media screen and (max-width: 767px) {
+            margin: 0px 30px 30px 30px;
+        }
         &:hover {
             cursor: pointer;
             color: #c7b299;
@@ -417,6 +461,10 @@ table {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__title {
         font-family: Raleway;
@@ -424,6 +472,11 @@ table {
         font-style: normal;
         font-weight: normal;
         color: #fff;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         span {
             color: #c7b299;
         }
@@ -447,9 +500,6 @@ table {
     // .projects__tabs
     padding: 60px 0px;
 
-    &__tabs {
-    }
-
     // .projects__tabs-navs
 
     &__tabs-navs {
@@ -457,6 +507,11 @@ table {
         justify-content: center;
         padding-top: 35px;
         margin: 0 -5px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+        }
     }
 
     // .projects__tabs-nav
@@ -467,6 +522,9 @@ table {
         margin: 0 5px;
         color: #8c8c8c;
         cursor: pointer;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 25px;
+        }
         &:hover {
             background: #998575;
             color: #fff;
@@ -490,6 +548,9 @@ table {
         margin: 15px 15px 70px 15px;
         box-sizing: border-box;
         cursor: pointer;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 25px;
+        }
         &:hover,
         &:hover .projects__tabs-item_title {
             background: #352f2d;
@@ -539,9 +600,14 @@ table {
     padding-top: 250px;
     padding-bottom: 230px;
     color: #fff;
+    @media screen and (max-width: 767px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     &__control {
         text-align: center;
-        width: 570px;
+        max-width: 570px;
         margin: 0 auto;
     }
     &__name {
@@ -566,6 +632,10 @@ table {
     justify-content: center;
     margin-bottom: -5px;
     padding-top: 80px;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
 }
 
 .mobile-text {
@@ -581,6 +651,9 @@ table {
         align-items: center;
         color: #555555;
         margin-bottom: 20px;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
     }
 
     // .mobile-text__info
@@ -591,6 +664,9 @@ table {
         line-height: 20px;
         color: #8c8c8c;
         padding-bottom: 50px;
+        @media screen and (max-width: 767px) {
+            margin: 0 20px;
+        }
     }
 
     // .mobile-text__list
@@ -599,6 +675,9 @@ table {
         display: flex;
         flex-direction: column;
         margin-left: 60px;
+        @media screen and (max-width: 767px) {
+            margin: 0 20px;
+        }
         & div {
             margin-bottom: 10px;
             font-family: Montserrat;
@@ -630,6 +709,10 @@ table {
     display: flex;
     justify-content: center;
     margin: 0 -35px;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
     &__item {
         display: flex;
         flex-direction: column;
@@ -676,12 +759,19 @@ table {
 
     box-sizing: border-box;
     cursor: pointer;
+    @media screen and (max-width: 767px) {
+        padding-top: 40px;
+    }
 
     &__column {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
         margin-bottom: 55px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
     }
 
     // .posts__item
@@ -691,8 +781,15 @@ table {
         margin-right: 85px;
         padding-bottom: 20px;
         border: 1px solid #b2b2b2;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin: 0 20px 30px;
+        }
         &:last-child {
             margin-right: 0px;
+            @media screen and (max-width: 767px) {
+                margin: 0 20px 30px;
+            }
         }
         &:hover,
         &:hover .projects__tabs-item_title {
@@ -750,6 +847,9 @@ table {
     display: flex;
     justify-content: center;
     margin: 0 -10px;
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+    }
     &__left,
     &__right {
         margin: 0 10px;
@@ -767,9 +867,19 @@ table {
     justify-content: center;
     padding: 140px 0px;
     align-items: center;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 70px 0px;
+    }
 }
 .brand-item {
     margin: 0 40px;
+    @media screen and (max-width: 767px) {
+        flex-basis: 40%;
+        justify-content: space-between;
+        margin: 0 10px;
+    }
 }
 .brand-img {
 }
@@ -783,10 +893,20 @@ table {
         justify-content: space-between;
         margin: 0 -25px;
         // .footer__column_item
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+        }
         &_item {
             flex-basis: 25%;
             box-sizing: border-box;
             margin: 0 25px;
+            @media screen and (max-width: 767px) {
+                flex-basis: 45%;
+                box-sizing: border-box;
+                margin: 0 5px;
+            }
         }
     }
 }
@@ -864,8 +984,14 @@ table {
 }
 .widget {
     // .widget__img
-
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__img {
+        @media screen and (max-width: 767px) {
+            width: 49%;
+        }
     }
 }
 .copy {
@@ -874,6 +1000,12 @@ table {
     &__list {
         display: flex;
         padding: 60px 0 40px;
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
     }
     &__item {
         color: #555555;
